@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_head"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.Toolbar
+            app:popupTheme="@style/OverflowMenuStyle"
+            app:title="歌单"
+            app:titleTextAppearance="@style/Theme.Toolbar.Title"
+            app:subtitleTextAppearance="@style/Theme.Toolbar.SubTitle"
+            app:subtitle="music"
+            app:navigationIcon="@mipmap/icon_nav_back_white"
+            android:id="@+id/toolbar"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+</FrameLayout>

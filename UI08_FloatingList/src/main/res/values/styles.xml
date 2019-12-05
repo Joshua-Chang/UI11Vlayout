@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+<!--        <item name="android:itemBackground">@android:color/black</item>-->
+<!--        <item name="android:overlapAnchor">false</item>-->
+        <item name="android:textColorPrimary">@android:color/darker_gray</item>
+
+
+
+<!--沉浸式-->
+<!--        4.4-->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        5.0-->
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+
+    </style>
+    <style name="Theme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar"/>
+    <style name="Theme.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Theme.Toolbar.SubTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+</resources>

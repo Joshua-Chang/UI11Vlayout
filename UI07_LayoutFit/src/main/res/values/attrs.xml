@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentLayout">
+        <attr name="widthPercent" format="float"/>
+        <attr name="heightPercent" format="float"/>
+        <attr name="MarginLeftPercent" format="float"/>
+        <attr name="MarginTopPercent" format="float"/>
+        <attr name="MarginRightPercent" format="float"/>
+        <attr name="MarginBottomPercent" format="float"/>
+    </declare-styleable>
+</resources>

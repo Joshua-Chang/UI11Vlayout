@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:title="歌单"
+            android:id="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+
+<!--            android:background="@android:color/transparent"-->
+<!--            app:popupTheme="@style/OverflowMenuStyle"-->
+<!--            app:titleTextAppearance="@style/Theme.Toolbar.Title"-->
+<!--            app:subtitleTextAppearance="@style/Theme.Toolbar.SubTitle"-->
+<!--            app:subtitle="music"-->
+<!--            app:logo="@mipmap/ic_launcher"-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?android:actionBarSize"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:text="自定义"/>-->
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:background="@android:color/white"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_feed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:id="@+id/suspension_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="8dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:gravity="center_vertical"
+                android:text="NetEase"
+                android:textColor="@android:color/background_dark"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/top_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/tv_nickname"
+                android:background="#33000000" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_behavior="com.wangyi.ui09.ScaleBehavior"
+        android:layout_gravity="bottom|right"
+        android:background="#323232"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+<!--   1.为（圆角、阴影流出的）内边距的适配-->
+    <!--    默认true app:cardPreventCornerOverlap="false" 取消5.0及一下版本的（默认为圆角、阴影留出的）padding值-->
+    <!--    默认false app:cardUseCompatPadding="true" 为5.0以上的阴影添加padding-->
+
+<!--   2. 必须用app:cardBackgroundColor        无作用android:background=""-->
+<!--      必须用app:contentPadding             无作用android:padding-->
+<!--   3. 5.0以上点击效果 clickable="true"时 android:foreground="?attr/selectableItemBackground"-->
+    <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        android:layout_gravity="center"
+        app:contentPadding="10dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+        <TextView
+            android:gravity="center"
+            android:text="CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
