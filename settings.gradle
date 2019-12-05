@@ -1,2 +1,2 @@
-include ':UI11_Vlayout', ':UI13_Rippe', ':UI01_Paint', ':UI02_Canvas', ':UI03_Path', ':UI06_Pxiel'
+include ':UI11_Vlayout', ':UI14_Rippe', ':UI01_Paint', ':UI02_Canvas', ':UI03_Path', ':UI06_Pxiel', ':UI04_Event', ':UI05_Animator', ':UI12_NestedScroll', ':UI08_FloatingList', ':UI07_LayoutFit', ':UI09_Recycler', ':UI13_Player'
 rootProject.name='UIAdvance'
