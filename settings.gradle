@@ -1,2 +1,2 @@
-include ':UI11_Vlayout', ':UI13_Rippe', ':UI01_Paint', ':UI02_Canvas'
+include ':UI11_Vlayout', ':UI13_Rippe', ':UI01_Paint', ':UI02_Canvas', ':UI03_Path'
 rootProject.name='UI11Vlayout'
