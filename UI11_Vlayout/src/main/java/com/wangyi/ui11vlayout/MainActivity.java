@@ -125,6 +125,33 @@ public class MainActivity extends AppCompatActivity {
         delegateAdapter.addAdapter(bannerAdapter);
         delegateAdapter.addAdapter(menuAdapter);
         delegateAdapter.addAdapter(newsAdapter);
+        for (int i = 0; i < ITEM_URL.length; i++) {
+            final int finalI=i;
+            BaseDelegateAdapter titleAdapter=new BaseDelegateAdapter(this,new LinearLayoutHelper(),R.layout.vlayout_title,1,0){
+                @Override
+                public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
+                    super.onBindViewHolder(holder, position);
+                    holder.setImageResourse(R.id.iv,ITEM_URL[finalI]);
+                }
+            };
+            GridLayoutHelper gridLayout = new GridLayoutHelper(2);
+            BaseDelegateAdapter gridAdapter=new BaseDelegateAdapter(this, gridLayout,R.layout.vlayout_grid,4,0){
+                @Override
+                public void onBindViewHolder(@NonNull BaseViewHolder holder, final int position) {
+                    int item = GRID_URL[position];
+                    ImageView iv = holder.getView(R.id.iv);
+                    Glide.with(getApplicationContext()).load(item).into(iv);
+                    iv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "item: "+position, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            };
+            delegateAdapter.addAdapter(titleAdapter);
+            delegateAdapter.addAdapter(gridAdapter);
+        }
         mRecyclerView.setAdapter(delegateAdapter);
     }
 
