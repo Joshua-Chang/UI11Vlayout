@@ -1,2 +1,2 @@
-include ':app'
+include ':ui11_vlayout', ':ui13_rippe'
 rootProject.name='UI11Vlayout'

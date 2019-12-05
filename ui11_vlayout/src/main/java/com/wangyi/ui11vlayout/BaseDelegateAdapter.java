@@ -31,6 +31,7 @@ public class BaseDelegateAdapter extends DelegateAdapter.Adapter<BaseViewHolder>
 
     @NonNull
     @Override
+
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             return new BaseViewHolder(LayoutInflater.from(context).inflate(mLayoutId,parent,false));
     }
