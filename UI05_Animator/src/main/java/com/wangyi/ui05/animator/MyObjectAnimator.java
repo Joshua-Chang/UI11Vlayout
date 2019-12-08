@@ -40,7 +40,7 @@ public class MyObjectAnimator implements VSYNCManger.AnimationFrameCallback{
     public boolean doAnimationFrame(long currentTime) {
         float total = mDuration / 16;
         float fraction = (index++) / total;
-        if (interpolator != null) {
+        if (interpolator != null) {//差值器：传入A，返回B，根据传入返回的不同，控制变化速率
             fraction=interpolator.getInterpolation(fraction);
         }
         if (index>=total) {

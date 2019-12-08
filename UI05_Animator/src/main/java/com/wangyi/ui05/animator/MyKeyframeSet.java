@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MyKeyframeSet {
-    TypeEvaluator mEvaluator ;
+    TypeEvaluator mEvaluator ;//类型估值器
     MyFloatKeyframe mFirstKeyframe;
     List<MyFloatKeyframe> mKeyframes;
 
@@ -34,6 +34,8 @@ public class MyKeyframeSet {
             MyFloatKeyframe nextKeyframe = mKeyframes.get(i);
             if (fraction<nextKeyframe.getmFraction()){
                 return mEvaluator.evaluate(fraction,prevKeyframe.getmValue(),nextKeyframe.getmValue());
+                //估值器：根据关键帧状态，估算出每个百分比应有的状态
+                //差值器：传入A，返回B，根据传入返回的不同，控制变化速率（例如：在属性动画中传入1%，返回2% 的加速差值器：本应显示1%的状态，结果显示了2%的状态）
             }
             prevKeyframe=nextKeyframe;
         }

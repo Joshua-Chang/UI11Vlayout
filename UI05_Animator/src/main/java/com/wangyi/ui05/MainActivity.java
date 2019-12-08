@@ -27,5 +27,6 @@ import com.wangyi.ui05.animator.MyObjectAnimator;
          animator.setInterpolator(new LinnerInterpolator());
          animator.setmDuration(3000);
          animator.start();
+
      }
  }
